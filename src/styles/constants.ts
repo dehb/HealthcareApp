@@ -1,19 +1,18 @@
 export enum COLORS {
   APP_BLUE= "#2369F3", // Primary Main: Splash, Button, Main panels, Selected icons
-  APP_TEXT_BLUE= "#256BF3",  //Main blue bold texts
   APP_WHITE= "#FFFFFF",
+  APP_BKG_WHITE= "#f5f4f4ff",
   APP_PANEL= "#DEEAFC", // For icons background, cards and general panels
   APP_ACCENT_PANEL= "#CCDFFA", // For unselected slider background
-  APP_DARK_TEXT= "#2F2F2F",
-  APP_LIGHT_TEXT= "#8F8F8F",
+  APP_TEXT_BLUE= "#256BF3",  //Main blue bold texts
+  APP_TEXT_DARK= "#2F2F2F",
+  APP_TEXT_LIGHT= "#B4B5B5",
   APP_GREY= "#E8E8E9", // For borders and dividers, input
-
   APP_ERROR_RED= "#FF0000",
   APP_WARNING_YELLOW= "#FFCF00",
   APP_APPROVAL_GREEN= "#08CC3F",
   APP_TRANSPARENT_1 = "#00000000",
   APP_PURE_BLACK = '#000000',
-
 } 
 
 

@@ -28,7 +28,7 @@ interface ICustomText extends TextProps{
         <Text
         numberOfLines={numberOfLines}
         style={[
-          {textAlign: left ? 'left' : right ? 'right' : 'center'}, fontColor(COLORS.APP_DARK_TEXT),
+          {textAlign: left ? 'left' : right ? 'right' : 'center'}, fontColor(COLORS.APP_TEXT_DARK),
             otherStyles,
         ]}
         >

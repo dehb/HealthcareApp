@@ -20,6 +20,9 @@
       ],
       "@utils/*": [
         "src/utils/*"
+      ],
+      "@navigation/*": [
+        "src/navigation/*"
       ]
     }
   }

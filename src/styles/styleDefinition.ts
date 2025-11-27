@@ -81,13 +81,13 @@ export const fontStyle = StyleSheet.create({
     },
     body_bold: {
         fontWeight: "700",
-        lineHeight: 26,
+        lineHeight: 20,
         fontSize: 15,
 
     },
     body_medium: {
         fontWeight: "500",
-        lineHeight: 26,
+        lineHeight: 20,
         fontSize: 15,
 
     },
@@ -98,12 +98,12 @@ export const fontStyle = StyleSheet.create({
     },
     normal_bold: {
         fontWeight: "700",
-        lineHeight: 24,
+        lineHeight: 20,
         fontSize: 14,
     },
     normal_regular: {
         fontWeight: "400",
-        lineHeight: 24,
+        lineHeight: 20,
         fontSize: 14,
     },
     small_bold: {
@@ -148,6 +148,25 @@ export const fontStyle = StyleSheet.create({
     },
 })
 
+export enum FONT_WEIGHT {
+  LIGHT = "200",
+  REGULAR = "400",
+  MEDIUM = "500",
+  SEMI = "600",
+  BOLD = "700",
+  BLACK = "900",
+  NORMAL = "normal",
+}
+
+export enum FONT_SIZE {
+  TITLE= 34,
+  SUBTITLE= 20,
+  HEADING= 17,
+  CONTENT= 18,
+  BODY= 15,
+  SMALL= 12,
+} 
+
 export const buttonStyle = StyleSheet.create({
     button_small: {
         height: 32,
@@ -189,7 +208,10 @@ export const keyboardStyle = StyleSheet.create({
         paddingHorizontal: 8,
     },
 })
+export const fontWeight = (fontWeight: FONT_WEIGHT = FONT_WEIGHT.REGULAR) =>
+  ({ fontWeight } as any);
 
+export const fontSize = (fontSize: FONT_SIZE = FONT_SIZE.BODY) => ({ fontSize });
 export const fontColor = (color: string) => ({ color });
 export const flex = (flex: number) => ({ flex });
 export const flexDirection = (flexDirection: FLEX) => ({ flexDirection } as any);
@@ -284,6 +306,100 @@ export const border = (radius: number, width?: number, color?: string) => {
     return { borderRadius: radius, borderWidth: width, borderColor: color };
   }
 };
+export const borderRadius = (
+  topLeft: number,
+  topRight?: number,
+  bottomRight?: number,
+  bottomLeft?: number
+) => {
+  if (
+    topRight === undefined &&
+    bottomRight === undefined &&
+    bottomLeft === undefined
+  ) {
+    // Only one parameter is passed
+    return { borderRadius: topLeft };
+  } else if (bottomRight === undefined && bottomLeft === undefined) {
+    // Two parameters are passed
+    return {
+      borderTopRightRadius: topLeft,
+      borderTopLeftRadius: topLeft,
+      borderBottomRightRadius: topRight,
+      borderBottomLeftRadius: topRight,
+    };
+  } else {
+    // Four parameters are passed
+    return {
+      borderTopRightRadius: topRight,
+      borderTopLeftRadius: topLeft,
+      borderBottomRightRadius: bottomRight,
+      borderBottomLeftRadius: bottomLeft,
+    };
+  }
+};
 
-export const textAlign = (textAlign: SIDES = SIDES.CENTER) =>
-  ({ textAlign } as any);
+export const textAlign = (textAlign: SIDES = SIDES.CENTER) =>  ({ textAlign } as any);
+
+export const width = (width: SPACE | number = SPACE.EIGHT) => ({ width });
+export const minWidth = (minWidth: SPACE | number = SPACE.EIGHT) => ({ minWidth });
+export const maxWidth = (maxWidth: SPACE | number = SPACE.EIGHT) => ({ maxWidth });
+export const height = (height: SPACE | number = SPACE.EIGHT) => ({ height });
+export const minHeight = (minHeight: SPACE | number = SPACE.EIGHT) => ({ minHeight });
+export const maxHeight = (maxHeight: SPACE | number = SPACE.EIGHT) => ({ maxHeight });
+
+
+export enum SPACE {
+  ZERO = 0,
+  ONE = 1,
+  TWO = 2,
+  FOUR = 4,
+  SIX = 6,
+  EIGHT = 8,
+  TEN = 10,
+  TWELVE = 12,
+  FOURTEEN = 14,
+  SIXTEEN = 16,
+  TWENTY = 20,
+  THIRTY = 30,
+  THIRTY_2 = 32,
+  FORTY = 40,
+  SIXTY = 60,
+  EIGHTY = 80,
+  HUNDRED = 100,
+  HUNDRED_12 = 112,
+  HUNDRED_70 = 170,
+
+  HUNDRED_80 = 180,
+  HUNDRED_90 = 190,
+  TWO_HUNDRED = 200,
+  SMALL_BUTTON_HEIGHT = 48,
+  BACK_ICON_SIZE = 40,
+  APP_BAR_HEIGHT = 48,
+  BUTTON_HEIGHT = 48,
+  FIFTEEN_PERCENT = "15%",
+  TWENTY_PERCENT = "20%",
+  TWENTY_2_PERCENT = "22%",
+  TWENTY_6_PERCENT = "26%",
+  THIRTY_PERCENT = "30%",
+  THIRTY_5_PERCENT = "35%",
+  FORTY_PERCENT = "40%",
+  FORTY_4_PERCENT = "44%",
+  FORTY_8_PERCENT = "48%",
+  FIFTY_PERCENT = "50%",
+  FIFTY_5_PERCENT = "55%",
+  SIXTY_PERCENT = "60%",
+  SIXTY_5_PERCENT = "65%",
+  SEVENTY_PERCENT = "70%",
+  SEVENTY_5_PERCENT = "75%",
+  EIGHTY_PERCENT = "80%",
+  EIGHTY_FIVE_PERCENT = "85%",
+  NINTY_PERCENT = "90%",
+  NINTY_5_PERCENT = "95%",
+
+  INPUT_HEIGHT = 44,
+  DEFAULT_PADDING = 16,
+  INPUT_PADDING = 12,
+  two70 = 270,
+  three40 = 340,
+  FULL = "100%"
+}
