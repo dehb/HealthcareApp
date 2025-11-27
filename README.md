@@ -19,9 +19,8 @@ https://youtube.com/shorts/-ZIE2yDPdX4?feature=share
 
 ## 🧱 Project Overview
 
-This project is a **React Native UI-only implementation** of a healthcare app concept.  
+This project is a **React Native UI-only implementation** of a healthcare app.  
 It demonstrates my ability to:
-
 - Translate complex UI from design → code  
 - Build reusable components with TypeScript  
 - Apply modern styling patterns  
@@ -29,32 +28,39 @@ It demonstrates my ability to:
 - Implement layouts matching professional mobile UI standards  
 - Use Expo + React Navigation effectively  
 
-No backend or API integrations — purely UI-focused.
-
 ## 🛠️ Tech Stack
-
 - **React Native**
 - **Expo**
 - **TypeScript**
 - **React Navigation**
 - **Vector Icons**
 - **Custom Theming (colors, spacing, shadows)**
-- 
+  
 
 ## 🎨 Design Inspiration
-
-This UI is based on the Dribbble concept here:  
+This UI is based on the Dribbble design here:  
 https://dribbble.com/shots/22417715-Doctor-Appointment-App-Hospital-Finder-App-Healthcare
-
-All credit goes to the designer.  
+All credit goes to the designer: **Ghulam Rasool**   
 This implementation focuses on coding a clean mobile UI experience.
 
 👤 Author
-
 Deborah Aderibigbe
 GitHub: https://github.com/dehb
 Email: dehb.iyanuoluwa@gmail.com
 Feel free to reach out for collaborations or job opportunities.
+
+## 📱 Screenshots
+<p align="center">
+ <img width="250" alt="IMG_4075" src="https://github.com/user-attachments/assets/d1f713f8-9a8d-4c5f-9a98-5325487f2d7f" />
+<img width="250" alt="IMG_4077" src="https://github.com/user-attachments/assets/c8926986-006c-4b3c-994f-af4e7806b35d" />
+<img width="250"  alt="IMG_4076" src="https://github.com/user-attachments/assets/bffb2adb-89ec-4855-ad6b-2ffc89e551fd" />
+</p>
+
+<p align="center">
+<img width="250" alt="IMG_4078" src="https://github.com/user-attachments/assets/38859441-2a04-4a1c-bffc-a27dd43e76a2" />
+<img width="250" alt="IMG_4073" src="https://github.com/user-attachments/assets/b7607518-2e21-4bb3-91e3-5a6156850a7f" />
+<img width="250"  alt="IMG_4074" src="https://github.com/user-attachments/assets/9fe667d6-3a0c-4a51-919a-64aab8b3d7f7" />
+</p>
 
 ## 🧪 How to Run the Project
 
@@ -63,6 +69,7 @@ git clone https://github.com/dehb/HealthcareApp.git
 cd HealthcareApp
 yarn install
 expo start
+```
 
 🚀 What This Project Demonstrates
 ✔ Strong UI development skills
@@ -85,21 +92,9 @@ Minimal inline styles
 Good naming conventions
 
 
-<p align="center">
- <img width="250" alt="IMG_4075" src="https://github.com/user-attachments/assets/d1f713f8-9a8d-4c5f-9a98-5325487f2d7f" />
 
-<img width="250" alt="IMG_4077" src="https://github.com/user-attachments/assets/c8926986-006c-4b3c-994f-af4e7806b35d" />
 
-<img width="250"  alt="IMG_4076" src="https://github.com/user-attachments/assets/bffb2adb-89ec-4855-ad6b-2ffc89e551fd" />
-</p>
-
-<p align="center">
-<img width="250" alt="IMG_4078" src="https://github.com/user-attachments/assets/38859441-2a04-4a1c-bffc-a27dd43e76a2" />
-
-<img width="250" alt="IMG_4073" src="https://github.com/user-attachments/assets/b7607518-2e21-4bb3-91e3-5a6156850a7f" />
-
-<img width="250"  alt="IMG_4074" src="https://github.com/user-attachments/assets/9fe667d6-3a0c-4a51-919a-64aab8b3d7f7" />
-</p>
+<p align="center">⭐ If you like this project, consider giving it a star!</p>
 
 
 
