@@ -1,6 +1,4 @@
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/ff7da8fb-ccc7-4c09-9e6c-befbf6cddebe" width="120" />
-</p>
+
 
 <h1 align="center">Healthcare App – React Native UI</h1>
 
