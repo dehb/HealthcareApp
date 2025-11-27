@@ -30,6 +30,9 @@ import AppIntroSlider from "react-native-app-intro-slider";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { IComponent } from "src/types";
 import Ionicons from "react-native-vector-icons/Ionicons";
+import { LANDING_SCREEN } from "src/navigation/screenComponentConstant";
+
+
 
 const { height, width } = Dimensions.get("screen");
 
@@ -92,8 +95,7 @@ const AppIntro = ({ navigation, route }: IComponent) => {
       >
         <Pressable
           onPress={
-            () => {}
-            // navigation.navigate(LANDING_SCREEN)
+            () =>  navigation.navigate(LANDING_SCREEN)
           }
           style={[
             flexDirection(FLEX.ROW),
@@ -129,7 +131,7 @@ const AppIntro = ({ navigation, route }: IComponent) => {
                 textAlign(SIDES.CENTER),
                 fontStyle.title_semibold,
                 margin(6, 0, 0, 0),
-                fontColor(COLORS.APP_DARK_TEXT),
+                fontColor(COLORS.APP_TEXT_DARK),
               ]}
             />
 
@@ -139,7 +141,7 @@ const AppIntro = ({ navigation, route }: IComponent) => {
                 text={item?.text}
                 otherStyles={[
                   fontStyle.body_regular,
-                  color(COLORS.APP_LIGHT_TEXT),
+                  color(COLORS.APP_TEXT_LIGHT),
                 ]}
                 type="subTitle"
               />

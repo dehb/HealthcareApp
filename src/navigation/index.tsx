@@ -1,7 +1,10 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { JSX, useContext, useEffect, useState } from "react";
 import * as Routes from "./screenComponentConstant";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import {
+  BottomTabBarProps,
+  createBottomTabNavigator,
+} from "@react-navigation/bottom-tabs";
 
 import {
   NavigationContainer,
@@ -10,6 +13,16 @@ import {
 
 import { Platform } from "react-native";
 import AppIntro from "@screens/UserAuth/AppIntro";
+import Landing from "@screens/UserAuth/Landing";
+import SignIn from "@screens/UserAuth/SignIn";
+import SignUp from "@screens/UserAuth/SignUp";
+import VerifyOTP from "@screens/UserAuth/VerifyOTP";
+import TabBar from "@components/TabBar";
+import Booking from "@screens/Booking";
+import Explore from "@screens/Explore";
+import Dashboard from "@screens/Home/Dashboard";
+import Chat from "@screens/Chat";
+import Profile from "@screens/Profile";
 
 export const navigationRef = createNavigationContainerRef();
 
@@ -38,27 +51,27 @@ const ScreenOptions = {
   animationEnabled: false,
 };
 
-// const TabNavigator = (): JSX.Element => {
-//   return (
-//     <Tab.Navigator
-//       id="TabNavigator"
-//       screenOptions={TabScreenOptions}
-//       tabBar={(props) => <TabBar {...props} />}
-//       initialRouteName={Routes.HOME_SCREEN}
-//     >
-//       <Tab.Screen name={Routes.HOME_SCREEN} component={Dashboard} />
-//       <Tab.Screen name={Routes.TASK_HOME_SCREEN} component={TaskHome} />
-//       <Tab.Screen name={Routes.INBOX_SCREEN} component={Inbox} />
-//       <Tab.Screen name={Routes.HELP_SCREEN} component={Help} />
+const TabNavigator = (): JSX.Element => {
+  return (
+    <Tab.Navigator
+      id="TabNavigator"
+      screenOptions={TabScreenOptions}
+      tabBar={(props: JSX.IntrinsicAttributes & BottomTabBarProps) => (
+        <TabBar {...props} />
+      )}
+      initialRouteName={Routes.HOME_SCREEN}
+    >
+      <Tab.Screen name={Routes.HOME_SCREEN} component={Dashboard} />
+      <Tab.Screen name={Routes.EXPLORE_HOME_SCREEN} component={Explore} />
+      <Tab.Screen name={Routes.BOOKING_HOME_SCREEN} component={Booking} />
+      <Tab.Screen name={Routes.CHAT_SCREEN} component={Chat} />
 
-//       <Tab.Screen name={Routes.USER_ACCOUNT_SCREEN} component={Account} />
-//     </Tab.Navigator>
-//   );
-// };
+      <Tab.Screen name={Routes.PROFILE_SCREEN} component={Profile} />
+    </Tab.Navigator>
+  );
+};
 
 export default function NavProvider() {
-  const [userStaysLoggedIn, setUserStaysLoggedIn] = React.useState(false);
-  const [myAccessToken, setMyAccessToken] = React.useState(true);
   const [isNavReady, setIsNavReady] = React.useState(false);
 
   return (
@@ -70,28 +83,21 @@ export default function NavProvider() {
       }}
     >
       <Stack.Navigator
-        // screenOptions={ScreenOptions} initialRouteName={Routes.TAB}>
         screenOptions={ScreenOptions}
-        initialRouteName={userStaysLoggedIn ? Routes.TAB : Routes.INTRO_SCREEN}
+        initialRouteName={Routes.INTRO_SCREEN}
       >
-        {/* <Stack.Screen
-            name={Routes.TAB}
-            component={TabNavigator}
-            options={{
-              gestureEnabled: Platform.OS === "ios" ? false : true, // Disable swipe only on iOS
-            }}
-          /> */}
-        {/* <Stack.Screen name={Routes.LOGIN_SCREEN} component={SignIn} />
-          <Stack.Screen name={Routes.SIGNUP_SCREEN} component={SignUp} />
-           <Stack.Screen name={Routes.LANDING_SCREEN} component={Landing} />
-          */}
+        <Stack.Screen name={Routes.TAB} component={TabNavigator} />
 
+        <Stack.Screen name={Routes.SIGNUP_SCREEN} component={SignUp} />
+        <Stack.Screen name={Routes.LOGIN_SCREEN} component={SignIn} />
         <Stack.Screen name={Routes.INTRO_SCREEN} component={AppIntro} />
+        <Stack.Screen name={Routes.LANDING_SCREEN} component={Landing} />
+        <Stack.Screen name={Routes.VERIFY_OTP_SCREEN} component={VerifyOTP} />
+
         {/* <Stack.Screen
             name={Routes.BIOMETRIC_AUTH_SCREEN}
             component={BiometricAuthentication}
           />
-          <Stack.Screen name={Routes.VERIFY_OTP_SCREEN} component={VerifyOTP} />
           <Stack.Screen
             name={Routes.VERIFY_EMAIL_SCREEN}
             component={VerifyEmail}
