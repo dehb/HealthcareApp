@@ -4,8 +4,15 @@
 
 <h1 align="center">Healthcare App – React Native UI</h1>
 
-# HealthcareApp
-Healthcare app UI (React Native): A clean UI implementation inspired by a Dribbble design for a modern health app. This project focuses solely on UI/UX — no backend or API integration.
+<p align="center">
+ A clean mobile UI implementation built with <b>React Native</b> and <b>Expo</b>. This was inspired by a Dribbble design for a modern health app. This project focuses solely on UI/UX — no backend or API integration.
+</P>
+<p align="center">
+  <img src="https://img.shields.io/badge/React Native-20232A?logo=react&logoColor=61DAFB" />
+  <img src="https://img.shields.io/badge/Expo-000000?logo=expo" />
+  <img src="https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white" />
+  <img src="https://img.shields.io/badge/Platform-iOS | Android-green" />
+</p>
 
 # Watch demo on youtube
 https://youtube.com/shorts/-ZIE2yDPdX4?feature=share
